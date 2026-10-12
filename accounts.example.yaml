@@ -1,0 +1,27 @@
+# exmail-mcp 账号配置模板
+# 复制为 accounts.yaml 后填入真实信息（accounts.yaml 已被 .gitignore 排除，不会提交）
+#
+# 字段说明：
+#   name     : 账号别名（工具调用时的 account 参数）
+#   address  : 完整邮箱地址
+#   password : 客户端专用密码/授权码（非网页登录密码）
+#   imap_host: IMAP 服务器地址
+#   imap_port: IMAP 端口（SSL，一般 993）
+#   smtp(可选): 发信配置；省略时按 imap→smtp、端口 465 推导
+#
+# 常见服务商：
+#   腾讯企业邮箱: imap.exmail.qq.com:993 / smtp.exmail.qq.com:465
+#   QQ 邮箱:     imap.qq.com:993 / smtp.qq.com:465
+#   163 邮箱:    imap.163.com:993 / smtp.163.com:465
+#   Gmail:       imap.gmail.com:993 / smtp.gmail.com:465
+
+accounts:
+  - name: example
+    address: someone@example.com
+    password: YOUR_AUTH_CODE_HERE
+    imap_host: imap.example.com
+    imap_port: 993
+    smtp:
+      host: smtp.example.com
+      port: 465
+      from_name: Your Name
